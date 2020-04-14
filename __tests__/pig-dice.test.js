@@ -13,8 +13,14 @@ describe ("PlayerResults", () => {
 });
 
 describe ( "eachRoll", () => {
-  test ("should generate random number between 1 and 6", () =>{
-    expect(eachRoll()).toBeGreaterThan(0);
+  test ("should generate random number between 1 and 6 and return 0 if a 1 is rolled", () =>{
+    expect(eachRoll()).toBeGreaterThanOrEqual(0);
     expect(eachRoll()).toBeLessThan(7);
+  });
+});
+
+describe ("switchPlayer", () => {
+  test("should switch between players 1 and 2 with a boolean", () => {
+    expect(this.switchPlayer()).toEqual(!(this.player1Turn));
   });
 });

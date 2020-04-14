@@ -26,16 +26,15 @@ PlayerResults.prototype.updateTotal = function(turnTotal) {
 };
 
 PlayerResults.prototype.switchPlayer = function() {
-  this.player1Turn = !this.player1Turn;
-  turnTotal = 0;
+  // this.player1Turn = !this.player1Turn;
+  // turnTotal = 0;
 };
 
 export var eachRoll = function() {
   var randomGenerator = Math.ceil(Math.random() * 6);
-  return randomGenerator;
-  // if (randomGenerator === 1) {
-  //   return 0;
-  // } else {
-  //   return randomGenerator;
-  // }
-};
+  if (randomGenerator === 1) {
+    return 0;
+  } else {
+    return randomGenerator;
+  }
+}
