@@ -1,6 +1,6 @@
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './styles.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 import $ from 'jquery';
 import { turnTotal } from './pig-dice.js';
 import { PlayerResults } from './pig-dice.js';
@@ -56,18 +56,6 @@ var roundTotal = function() {
 };
 
 var playerResults = new PlayerResults ();
-export var endOfGame = function() {
-  $('.gameover').show();
-  $('.game').hide();
-  playerResults.round = 0;
-  if (playerResults.player1GrandTotal === playerResults.player2GrandTotal) {
-    $('.winner').html('Tie!');
-  } else if (playerResults.player1GrandTotal > playerResults.player2GrandTotal){
-    $('.winner').html('Player 1!');
-  } else {
-    $('.winner').html('Player 2!');
-  }
-};
 
 var refreshScores = function() {
   $('.playerOneScore').html(playerResults.player1GrandTotal);
