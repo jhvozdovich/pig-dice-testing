@@ -1,7 +1,7 @@
 // Business Logic --------------------------------------------
 export var turnTotal = 0;
 
-import { endOfGame } from "./main.js";
+import { endOfGame } from "./uilogic.js";
 
 export function PlayerResults() {
   this.player1GrandTotal = 0,
@@ -26,8 +26,8 @@ PlayerResults.prototype.updateTotal = function(turnTotal) {
 };
 
 PlayerResults.prototype.switchPlayer = function() {
-  // this.player1Turn = !this.player1Turn;
-  // turnTotal = 0;
+  this.player1Turn = !this.player1Turn;
+  turnTotal = 0;
 };
 
 export var eachRoll = function() {

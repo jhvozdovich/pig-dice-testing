@@ -21,6 +21,8 @@ describe ( "eachRoll", () => {
 
 describe ("switchPlayer", () => {
   test("should switch between players 1 and 2 with a boolean", () => {
-    expect(this.switchPlayer()).toEqual(!(this.player1Turn));
+    var playerResults = new PlayerResults();
+    playerResults.switchPlayer();
+    expect(playerResults.player1Turn).toEqual(false);
   });
 });
