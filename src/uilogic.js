@@ -1,3 +1,5 @@
+import { playerResults } from "./main.js";
+
 export var endOfGame = function() {
   $('.gameover').show();
   $('.game').hide();

@@ -4,7 +4,7 @@ import './styles.css';
 import $ from 'jquery';
 import { turnTotal } from './pig-dice.js';
 import { PlayerResults } from './pig-dice.js';
-import { eachRoll } from './pig-dice.js';
+import { roundTotal } from './pig-dice.js';
 
 // User Interface Logic ------------------------------
 // function from animate.css github
@@ -22,7 +22,7 @@ function animateCSS(element, animationName, callback) {
   node.addEventListener('animationend', handleAnimationEnd);
 }
 
-var diceDisplay = function(rollResult) {
+export var diceDisplay = function(rollResult) {
   var pig = $('.dice-hide#pig');
   $('.dice-hide').hide();
   if (rollResult === 1) {
@@ -41,21 +41,21 @@ var diceDisplay = function(rollResult) {
   }
 };
 
-var roundTotal = function() {
-  var rollResult = eachRoll();
-  diceDisplay(rollResult);
+export var roundTotal = function() {
+  var rollResult = eachRoll();  //calls business function
+  diceDisplay(rollResult); //UI for display based on business logic
   if (rollResult === 0){
-    diceDisplay(1);
-    turnTotal = 0;
-    playerResults.updateTotal(turnTotal);
+    diceDisplay(1);   //UI for dice display
+    turnTotal = 0;    //updates global variable
+    playerResults.updateTotal(turnTotal);  //calls business function to update player results with 0 after rolling a 1
   }
   else {
-    turnTotal += rollResult;
-    $('.roll-total').html(turnTotal);
+    turnTotal += rollResult;  //updates global variable
+    $('.roll-total').html(turnTotal);  //UI for update of score, accumulates with each roll
   } 
 };
 
-var playerResults = new PlayerResults ();
+export var playerResults = new PlayerResults ();
 
 var refreshScores = function() {
   $('.playerOneScore').html(playerResults.player1GrandTotal);

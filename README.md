@@ -15,12 +15,10 @@ _This webpage allows a user to roll a die, amass points until they decide to "ho
 * Navigate to index.html file.
 * Right click and open in the browser of your choice.
 
-* Alternatively, open the webpage at https://jhvozdovich.github.io/pig-dice-testing
-
 ## Known Bugs
 
-There are no known bugs at the time of this update.
-
+There are currently issues linking functions between business logic and UI logic sections that prevent values from updating.
+ 
 ## Support and contact details
 
 _Have a bug or an issue with this application? [Open a new issue](https://github.com/jhvozdovich/pig-dice-testing/issues) here on GitHub._

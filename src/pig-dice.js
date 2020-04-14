@@ -2,6 +2,7 @@
 export var turnTotal = 0;
 
 import { endOfGame } from "./uilogic.js";
+import { diceDisplay } from "./main.js"
 
 export function PlayerResults() {
   this.player1GrandTotal = 0,
@@ -37,4 +38,5 @@ export var eachRoll = function() {
   } else {
     return randomGenerator;
   }
-}
+};
+
