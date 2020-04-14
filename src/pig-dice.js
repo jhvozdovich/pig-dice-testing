@@ -11,18 +11,18 @@ export function PlayerResults() {
 }
 
 PlayerResults.prototype.updateTotal = function(turnTotal) {
-  // if (this.player1Turn) {
-  //   this.player1GrandTotal += turnTotal;
-  //   this.switchPlayer();
-  // } else {
-  //   this.player2GrandTotal += turnTotal;
-  //   this.round += 1;
-  //   if (this.round === 4) {
-  //     endOfGame();
-  //   } else {
-  //     this.switchPlayer();
-  //   }
-  // }
+  if (this.player1Turn) {
+    this.player1GrandTotal += turnTotal;
+    this.switchPlayer();
+  } else {
+    this.player2GrandTotal += turnTotal;
+    this.round += 1;
+    if (this.round === 4) {
+      endOfGame();
+    } else {
+      this.switchPlayer();
+    }
+  }
 };
 
 PlayerResults.prototype.switchPlayer = function() {
