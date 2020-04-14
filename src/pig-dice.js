@@ -31,7 +31,8 @@ PlayerResults.prototype.switchPlayer = function() {
 };
 
 export var eachRoll = function() {
-  // var randomGenerator = Math.ceil(Math.random() * 6);
+  var randomGenerator = Math.ceil(Math.random() * 6);
+  return randomGenerator;
   // if (randomGenerator === 1) {
   //   return 0;
   // } else {
