@@ -1,12 +1,13 @@
 # _Pig Dice_
 
-#### _Epicodus Project, Interactive Pig Dice Game April 8, 2020_
+#### _Epicodus Project, Interactive Pig Dice Game April 14, 2020_
 
-#### By _**Jessica Hvozdovich and Khan Sahab**_
+#### By _**Jessica Hvozdovich and Dan Merys**_
+#### Version 1 Contributions by _**Khan Sahab**_
 
 ## Description
 
-_This webpage allows a user to roll a die, amass points until they decide to "hold" or roll a one, causing them to forfeit all points accumulated, and then allow another player to do the same. Players accumulate points in between rounds, the highest score at the end of three rounds is the victor._
+_This webpage allows a user to roll a die, amass points until they decide to "hold" or roll a one, causing them to forfeit all points accumulated, and then allow another player to do the same. Players accumulate points in between rounds, the highest score at the end of three rounds is the victor. This project is also being used to practice the Red Green Refactor testing workflow and configuring with Webpack._
 
 ## Setup/Installation Requirements
 
@@ -14,7 +15,7 @@ _This webpage allows a user to roll a die, amass points until they decide to "ho
 * Navigate to index.html file.
 * Right click and open in the browser of your choice.
 
-* Alternatively, open the webpage at https://jhvozdovich.github.io/pig-dice
+* Alternatively, open the webpage at https://jhvozdovich.github.io/pig-dice-testing
 
 ## Known Bugs
 
@@ -22,7 +23,7 @@ There are no known bugs at the time of this update.
 
 ## Support and contact details
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/jhvozdovich/pig-dice/issues) here on GitHub._
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/jhvozdovich/pig-dice-testing/issues) here on GitHub._
 
 ## Technologies Used
 
@@ -32,6 +33,10 @@ Bootstrap
 Git and GitHub
 JavaScript
 jQuery
+Jest
+Babel
+Webpack
+ESLint
 
 ### Specs
 | Spec | Input | Output |
@@ -51,4 +56,4 @@ jQuery
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2020 **_Jessica Hvozdovich and Khan Sahab_**
+Copyright (c) 2020 **_Jessica Hvozdovich and Dan Merys_**
