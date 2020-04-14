@@ -35,6 +35,24 @@ describe ("updateTotal", () => {
   });
 });
 
+describe ("updateTotal", () => {
+  test("should add one to increment the round after player 2's turn", () => {
+    var playerResults = new PlayerResults();
+    playerResults.switchPlayer();
+    console.log("expect false after switching turns " + playerResults.player1Turn);
+    console.log("expect start at round 1 " + playerResults.round);
+    playerResults.updateTotal();
+    expect(playerResults.round).toEqual(2);
+  });
+});
+
+
+// export function PlayerResults() {
+//   this.player1GrandTotal = 0,
+//   this.player2GrandTotal = 0,
+//   this.player1Turn = true,
+//   this.round = 1;
+// }
 
 
 // PlayerResults.prototype.updateTotal = function(turnTotal) {
