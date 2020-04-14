@@ -1,10 +1,10 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-import $ from "jquery";
-import { turnTotal } from "./pig-dice.js";
-import { PlayerResults } from "./pig-dice.js";
-import { eachRoll } from "./pig-dice.js";
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import './styles.css';
+import $ from 'jquery';
+import { turnTotal } from './pig-dice.js';
+import { PlayerResults } from './pig-dice.js';
+import { eachRoll } from './pig-dice.js';
 
 // User Interface Logic ------------------------------
 // function from animate.css github
@@ -23,21 +23,21 @@ function animateCSS(element, animationName, callback) {
 }
 
 var diceDisplay = function(rollResult) {
-  var pig = $(".dice-hide#pig");
-  $(".dice-hide").hide();
+  var pig = $('.dice-hide#pig');
+  $('.dice-hide').hide();
   if (rollResult === 1) {
     pig.show();
-    animateCSS(".dice-hide#pig", "bounce");
+    animateCSS('.dice-hide#pig', 'bounce');
   } else if (rollResult === 2) {
-    $(".dice-hide#two").show();
+    $('.dice-hide#two').show();
   } else if (rollResult === 3) {
-    $(".dice-hide#three").show();
+    $('.dice-hide#three').show();
   } else if (rollResult === 4) {
-    $(".dice-hide#four").show();
+    $('.dice-hide#four').show();
   } else if (rollResult === 5) {
-    $(".dice-hide#five").show();
+    $('.dice-hide#five').show();
   } else if (rollResult === 6) {
-    $(".dice-hide#six").show();
+    $('.dice-hide#six').show();
   }
 };
 
@@ -51,53 +51,53 @@ var roundTotal = function() {
   }
   else {
     turnTotal += rollResult;
-    $(".roll-total").html(turnTotal);
+    $('.roll-total').html(turnTotal);
   } 
 };
 
 var playerResults = new PlayerResults ();
 export var endOfGame = function() {
-  $(".gameover").show();
-  $(".game").hide();
+  $('.gameover').show();
+  $('.game').hide();
   playerResults.round = 0;
   if (playerResults.player1GrandTotal === playerResults.player2GrandTotal) {
-    $(".winner").html("Tie!");
+    $('.winner').html('Tie!');
   } else if (playerResults.player1GrandTotal > playerResults.player2GrandTotal){
-    $(".winner").html("Player 1!");
+    $('.winner').html('Player 1!');
   } else {
-    $(".winner").html("Player 2!");
+    $('.winner').html('Player 2!');
   }
 };
 
 var refreshScores = function() {
-  $(".playerOneScore").html(playerResults.player1GrandTotal);
-  $(".playerTwoScore").html(playerResults.player2GrandTotal);
-  $(".round").html(playerResults.round);
+  $('.playerOneScore').html(playerResults.player1GrandTotal);
+  $('.playerTwoScore').html(playerResults.player2GrandTotal);
+  $('.round').html(playerResults.round);
   if (playerResults.player1Turn) {
-    $(".playerId").html(1);
+    $('.playerId').html(1);
   } else {
-    $(".playerId").html(2);
+    $('.playerId').html(2);
   } 
 };
 
 $(document).ready(function() {
-  $("#rules-button").click(function() {
-    $(".rules").slideToggle();
+  $('#rules-button').click(function() {
+    $('.rules').slideToggle();
   });
-  $("#start").click(function() {
-    $(".game").show();
-    $(".welcome").hide();
+  $('#start').click(function() {
+    $('.game').show();
+    $('.welcome').hide();
   });
-  $("#pig").show();
-  $("button#roll").click(function() {
+  $('#pig').show();
+  $('button#roll').click(function() {
     roundTotal();
     refreshScores();
   });
-  $("button#hold").click(function() {  
+  $('button#hold').click(function() {  
     playerResults.updateTotal(turnTotal);
     refreshScores();
   });
-  $("button#new-game").click(function() {
+  $('button#new-game').click(function() {
     window.location.reload();
   });
 });
