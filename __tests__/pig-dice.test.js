@@ -1,5 +1,5 @@
 import { PlayerResults } from "../src/pig-dice.js";
-// import { eachRoll } from "../src/pig-dice.js";
+import { eachRoll } from "../src/pig-dice.js";
 // import { turnTotal } from "../src/pig-dice.js";
 
 describe ("PlayerResults", () => {
@@ -9,5 +9,12 @@ describe ("PlayerResults", () => {
     expect(playerResults.player2GrandTotal).toEqual(0);
     expect(playerResults.player1Turn).toEqual(true);
     expect(playerResults.round).toEqual(1);
+  });
+});
+
+describe ( "eachRoll", () => {
+  test ("should generate random number between 1 and 6", () =>{
+    expect(eachRoll()).toBeGreaterThan(0);
+    expect(eachRoll()).toBeLessThan(7);
   });
 });

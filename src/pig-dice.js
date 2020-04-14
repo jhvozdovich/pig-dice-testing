@@ -31,10 +31,10 @@ PlayerResults.prototype.switchPlayer = function() {
 };
 
 export var eachRoll = function() {
-  var randomGenerator = Math.ceil(Math.random() * 6);
-  if (randomGenerator === 1) {
-    return 0;
-  } else {
-    return randomGenerator;
-  }
+  // var randomGenerator = Math.ceil(Math.random() * 6);
+  // if (randomGenerator === 1) {
+  //   return 0;
+  // } else {
+  //   return randomGenerator;
+  // }
 };
