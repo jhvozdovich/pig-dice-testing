@@ -1,5 +1,5 @@
 {
-  "name": "Pig Dice",
+  "name": "pig-dice",
   "version": "1.0.0",
   "description": "users are able to roll a die and accumulate scores",
   "main": "main.js",
