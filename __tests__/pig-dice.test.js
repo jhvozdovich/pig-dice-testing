@@ -45,27 +45,3 @@ describe ("updateTotal", () => {
     expect(playerResults.round).toEqual(2);
   });
 });
-
-
-// export function PlayerResults() {
-//   this.player1GrandTotal = 0,
-//   this.player2GrandTotal = 0,
-//   this.player1Turn = true,
-//   this.round = 1;
-// }
-
-
-// PlayerResults.prototype.updateTotal = function(turnTotal) {
-//   if (this.player1Turn) {
-//     this.player1GrandTotal += turnTotal;
-//     this.switchPlayer();
-//   } else {
-//     this.player2GrandTotal += turnTotal;
-//     this.round += 1;
-//     if (this.round === 4) {
-//       endOfGame();
-//     } else {
-//       this.switchPlayer();
-//     }
-//   }
-// };
